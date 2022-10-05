@@ -1,0 +1,595 @@
+@import "normalize";
+@function pxToRem($px) {
+  @return ($px / 16px) * 1rem;
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Serif", serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+h1 {
+  margin-top: 0;
+}
+/*--------Homepage Start----------*/
+.homepage {
+  min-width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+/*-------NAV START------*/
+.home {
+  a {
+    position: fixed;
+    color: black;
+    font-size: pxToRem(25px);
+    font-weight: 700;
+    text-decoration: none;
+    right: 20px;
+    bottom: 10px;
+    border: 1px solid #fc6d6d;
+    background-color: #fc6d6d;
+    border-radius: 10px;
+    padding: 5px;
+    z-index: 2;
+  }
+  a:hover {
+    color: white;
+  }
+}
+nav {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 60px;
+  gap: 50px;
+  align-items: center;
+  a {
+    position: relative;
+    font-weight: 700;
+    margin-right: 20px;
+    font-size: pxToRem(25px);
+    text-decoration: none;
+    color: #fc6d6d;
+    top: 5px;
+  }
+  a:hover {
+    color: white;
+  }
+  .port {
+    font-weight: 700;
+    font-size: pxToRem(60px);
+    color: #fc6d6d;
+    position: absolute;
+    left: 7px;
+  }
+  .lio {
+    font-weight: 700;
+    font-size: pxToRem(45px);
+    color: white;
+  }
+}
+/*-------NAV END------*/
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 97%;
+  height: 45%;
+  margin-top: 20vh;
+}
+.wrapper p {
+  flex-basis: 92%;
+}
+.hellotxt {
+  color: white;
+  font-size: pxToRem(25px);
+}
+.jd {
+  font-size: pxToRem(90px);
+  font-family: "Aref Ruqaa Ink", serif;
+  color: #fc6d6d;
+  margin-top: -100px;
+}
+
+.wrapper .static-txt {
+  position: relative;
+  color: white;
+  font-size: pxToRem(60px);
+  font-weight: 700;
+  margin-top: -100px;
+}
+.wrapper .dynamic-txts {
+  position: relative;
+  height: 90px;
+  line-height: 90px;
+  margin-left: 15px;
+  overflow: hidden;
+  margin-top: -105px;
+}
+.dynamic-txts li {
+  color: #fc6d6d;
+  list-style: none;
+  font-size: pxToRem(60px);
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 6s steps(4) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+.dynamic-txts li span {
+  position: relative;
+}
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  border-left: 2px solid #fc6d6d;
+  animation: typing 1.5s steps(10) infinite;
+}
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
+/*--------Homepage END----------*/
+
+/*--------Projects Start----------*/
+hr {
+  color: rgb(39, 39, 39);
+}
+#projects h1 {
+  font-size: pxToRem(50px);
+  color: black;
+  text-transform: uppercase;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+}
+section.projects {
+  background-color: #fc6d6d;
+  min-height: 100vh;
+  min-width: 100%;
+}
+.boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 90vh;
+}
+.projects p {
+  color: black;
+  font-size: pxToRem(40px);
+  margin: 10px;
+  text-align: center;
+}
+.leftbox {
+  position: relative;
+  width: 70vh;
+  height: 30vh;
+  background-image: url(/img/adam-miller-dBaz0xhCkPY-unsplash.jpg);
+  background-size: cover;
+  background-position: 70%;
+  border: 15px solid black;
+  margin: 20px;
+  border-radius: 5rem;
+  text-align: center;
+}
+.leftbox a {
+  font-size: pxToRem(40px);
+  text-decoration: none;
+  color: black;
+  margin: 30px;
+}
+.leftbox a:hover {
+  color: #fc6d6d;
+}
+.rightbox {
+  position: relative;
+  width: 70vh;
+  height: 30vh;
+  background-color: rgb(160, 45, 25);
+  border: 15px solid black;
+  margin: 20px;
+  border-radius: 5rem;
+}
+.leftboxupper {
+  position: relative;
+  width: 70vh;
+  height: 30vh;
+  background-color: rgb(223, 223, 35);
+  border: 15px solid black;
+  margin: 20px;
+  border-radius: 5rem;
+}
+.rightboxupper {
+  position: relative;
+  width: 70vh;
+  height: 30vh;
+  background-color: rgb(31, 53, 182);
+  border: 15px solid black;
+  margin: 20px;
+  border-radius: 5rem;
+}
+/*--------Projects END----------*/
+
+/*--------About Start----------*/
+section.about {
+  background-color: black;
+  min-height: 100vh;
+  min-width: 100%;
+}
+#about h1 {
+  font-size: pxToRem(50px);
+  color: #fc6d6d;
+  text-transform: uppercase;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+}
+img {
+  width: 30%;
+  position: relative;
+  box-shadow: 2px 2px 2px rgb(165, 22, 22);
+  float: right;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.about p {
+  color: white;
+  font-size: pxToRem(35px);
+  margin-left: 20px;
+  margin-top: 20px;
+  letter-spacing: 3px;
+}
+.about span {
+  font-size: pxToRem(60px);
+  font-weight: 700;
+}
+blockquote {
+  color: #fc6d6d;
+  font-size: pxToRem(70px);
+  margin-left: 25px;
+  margin-top: 70px;
+}
+/*--------About END----------*/
+
+/*--------Contact Start----------*/
+section.contact {
+  background-color: #fc6d6d;
+  min-height: 100vh;
+  min-width: 100%;
+}
+#contact h1 {
+  font-size: pxToRem(50px);
+  color: black;
+  text-transform: uppercase;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+}
+.contactbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+.contacttxt {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 30%;
+  height: 50vh;
+  border: 1px solid black;
+  gap: 50px;
+  padding: 20px;
+}
+label {
+  font-size: pxToRem(20px);
+  position: relative;
+  top: 10px;
+  font-weight: 700;
+}
+input {
+  font-size: pxToRem(15px);
+  position: relative;
+  font-weight: 400;
+  width: 100%;
+}
+textarea {
+  resize: none;
+}
+button {
+  position: relative;
+  font-size: pxToRem(50px);
+  color: white;
+  width: 30rem;
+  border: 10px solid black;
+  background-color: black;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+button:hover {
+  color: #fc6d6d;
+  cursor: pointer;
+}
+.icons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+i {
+  font-size: pxToRem(80px);
+  text-decoration: none;
+  color: black;
+  margin: 20px;
+  bottom: 0;
+  transition: 0.5s ease-in-out;
+}
+i:hover {
+  font-size: pxToRem(100px);
+  cursor: pointer;
+}
+/*------------Contact END---------------*/
+
+/*--------Mobile Version START----------*/
+/*---------Mobile Homepage Start--------*/
+
+/*-------MOBILE NAV START------*/
+@media screen and (max-width: 800px) {
+  .home a {
+    font-size: pxToRem(10px);
+  }
+  .container {
+    width: 100%;
+    height: 60px;
+    gap: 3px;
+  }
+  .container a {
+    font-size: pxToRem(12px);
+  }
+  .port {
+    font-size: pxToRem(25px);
+    left: 7px;
+  }
+  .lio {
+    font-weight: 700;
+    font-size: pxToRem(15px);
+    color: white;
+  }
+  /*-------MOBILE NAV END------*/
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    text-align: center;
+    width: 97%;
+    height: 45%;
+  }
+  .hellotxt {
+    font-size: pxToRem(25px);
+  }
+  .jd {
+    font-size: pxToRem(50px);
+  }
+
+  .wrapper .static-txt {
+    font-size: pxToRem(30px);
+    margin: 0;
+  }
+  .wrapper .dynamic-txts {
+    height: 150px;
+    line-height: 90px;
+    margin: 0;
+  }
+  /*------Mobile Homepage END------*/
+
+  /*-----Mobile Projects Start-----*/
+  #projects h1 {
+    font-size: pxToRem(20px);
+  }
+  .boxes {
+    text-align: center;
+  }
+  .projects p {
+    font-size: pxToRem(30px);
+  }
+  .leftbox {
+    width: 30rem;
+    height: 100px;
+    margin: 0;
+  }
+  .leftbox a {
+    font-size: pxToRem(30px);
+  }
+  .rightbox {
+    width: 30rem;
+    height: 100px;
+    margin: 0;
+  }
+  .leftboxupper {
+    width: 30rem;
+    height: 100px;
+    margin: 0;
+  }
+  .rightboxupper {
+    width: 30rem;
+    height: 100px;
+    margin: 0;
+  }
+  /*-----MobileProjects END-----*/
+
+  /*-----Mobile Version About Start------*/
+  #about h1 {
+    font-size: pxToRem(20px);
+  }
+  .about p {
+    font-size: pxToRem(15px);
+  }
+  .about span {
+    font-size: pxToRem(20px);
+  }
+  blockquote {
+    font-size: pxToRem(25px);
+    margin-top: 100px;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  /*------Mobile Version About END-------*/
+  /*----Mobile Version Contact Start----*/
+
+  #contact h1 {
+    font-size: pxToRem(20px);
+  }
+  .contacttxt {
+    width: 60%;
+  }
+  label {
+    font-size: pxToRem(15px);
+  }
+  input {
+    font-size: pxToRem(10px);
+  }
+  textarea {
+    resize: none;
+    width: 100%;
+    height: 20vh;
+  }
+  button {
+    font-size: pxToRem(25px);
+    width: 16rem;
+  }
+  i {
+    font-size: pxToRem(30px);
+  }
+  i:hover {
+    font-size: pxToRem(45px);
+  }
+  /*------Mobile Version Contact END-------*/
+}
+@media screen and (min-width: 450px) and (max-width: 600px) {
+  .about p {
+    font-size: pxToRem(16px);
+  }
+  .about span {
+    font-size: pxToRem(30px);
+  }
+  blockquote {
+    font-size: pxToRem(32px);
+    margin-bottom: 10px;
+  }
+}
+/*--------Mobile Version END------------*/
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .about p {
+    font-size: pxToRem(25px);
+  }
+  .about span {
+    font-size: pxToRem(20px);
+  }
+  blockquote {
+    font-size: pxToRem(45px);
+  }
+}
+/*-----IPAD Projects Start-----*/
+@media screen and (min-width: 801px) and (max-width: 1300px) {
+  /*-----IPAD Projects START-----*/
+  #projects h1 {
+    font-size: pxToRem(25px);
+  }
+  .boxes {
+    text-align: center;
+  }
+  .projects p {
+    font-size: pxToRem(30px);
+  }
+  .leftbox {
+    width: 45rem;
+    height: 100px;
+    margin: 0;
+  }
+  .leftbox a {
+    font-size: pxToRem(30px);
+  }
+  .rightbox {
+    width: 45rem;
+    height: 100px;
+    margin: 0;
+  }
+  .leftboxupper {
+    width: 45rem;
+    height: 100px;
+    margin: 0;
+  }
+  .rightboxupper {
+    width: 45rem;
+    height: 100px;
+    margin: 0;
+  }
+  /*-----IPAD Projects END-----*/
+
+  /*-----IPAD Version About Start------*/
+  #about h1 {
+    font-size: pxToRem(20px);
+  }
+  .about p {
+    font-size: pxToRem(25px);
+  }
+  .about span {
+    font-size: pxToRem(30px);
+  }
+  blockquote {
+    font-size: pxToRem(55px);
+    margin-top: 100px;
+    text-align: center;
+  }
+  /*-----IPAD Projects END-----*/
+  /*-----IPAD Contact Start----*/
+  textarea {
+    resize: none;
+    width: 100%;
+    height: 20vh;
+  }
+  button {
+    font-size: pxToRem(20px);
+    width: 18rem;
+  }
+  i {
+    font-size: pxToRem(25px);
+  }
+  i:hover {
+    font-size: pxToRem(45px);
+  }
+  /*-----IPAD Contact END-----*/
+}
+@media screen and (min-width: 1301px) and (max-width: 2050px) {
+  .about span {
+    font-size: pxToRem(50px);
+  }
+  /*-----IPAD Projects END-----*/
+  /*-----IPAD Contact Start----*/
+  textarea {
+    resize: none;
+    width: 100%;
+    height: 20vh;
+  }
+}
+
+/*---IPAD Version About END----*/
