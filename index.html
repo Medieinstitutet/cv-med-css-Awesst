@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/main.css" />
     <title>Resume</title>
-    <link rel="icon" href="img/red circle.png" />
+    <link rel="icon" href="img/redcircle.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -72,7 +72,7 @@
     <section class="about" id="about">
       <h1>About Me</h1>
       <hr />
-      <img src="img/jakobselfie.jpg" />
+      <img src="img/jakobselfie.jpg" alt="selfie" />
       <p>
         <span>Hello!</span><br />
         Welcome to my About me page. Lets Talk about me!<br />
@@ -98,14 +98,16 @@
           <div class="info">
             <label for="name"
               >Enter your name:<input
+                id="name"
                 placeholder="First Name, Last Name"
-                type="textarea"
+                type="text"
                 required
             /></label>
           </div>
           <div class="info">
             <label for="email"
               >Enter your email:<input
+                id="email"
                 placeholder="Example@hotmail.com"
                 type="email"
                 required
@@ -115,10 +117,10 @@
             <div class="infotxt">
               <label for="freetxt"
                 >Describe your errand:<textarea
+                  id="freetxt"
                   placeholder="Hello!"
                   rows="10"
                   cols="55"
-                  type="freetxt"
                   required
                 ></textarea>
               </label>
